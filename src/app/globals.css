@@ -1,0 +1,50 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: block;
+  min-width: 320px;
+}
+
+html,
+body {
+  background: var(--bg-dark-1) !important;
+}
+
+#content section:last-of-type {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+#content section:last-of-type .container,
+#content section:last-of-type .row:last-child {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+footer {
+  margin: 0 !important;
+}
+
+#wrapper {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+body {
+  padding-bottom: 0 !important;
+}
+
+/* ── footer gap removal ── */
+#content section:last-of-type {
+  margin-bottom: 0 !important;
+}
+footer, #wrapper > footer {
+  margin: 0 !important;
+  padding-bottom: 0 !important;
+}
