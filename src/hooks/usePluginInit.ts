@@ -4,6 +4,8 @@ declare const $: any;
 declare const WOW: any;
 declare const jarallax: any;
 
+let wowInstance: any = null;
+
 function waitForJQuery(cb: () => void, tries = 0) {
   if (typeof $ !== 'undefined') { cb(); return; }
   if (tries > 50) return;
@@ -40,7 +42,17 @@ export function usePluginInit() {
       });
 
       if (typeof WOW !== 'undefined') {
-        new WOW({ mobile: false }).init();
+        if (wowInstance) {
+          wowInstance.stop?.();
+          wowInstance = null;
+        }
+        document.querySelectorAll('.wow').forEach((el) => {
+          el.classList.remove('wow-animated');
+          (el as HTMLElement).style.visibility = '';
+          (el as HTMLElement).style.animationName = '';
+        });
+        wowInstance = new WOW({ mobile: false });
+        wowInstance.init();
       }
 
       if (typeof jarallax !== 'undefined') {
