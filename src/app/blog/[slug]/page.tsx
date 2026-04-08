@@ -117,7 +117,7 @@ export default function BlogPost() {
         </div>
       </section>
 
-      <section className="bg-color text-light pt-60" style={{ paddingBottom: 0 }}>
+      <section className="bg-color text-light pt-60 no-bottom">
         <div className="container">
           <div className="row g-4">
             <div className="col-md-9">

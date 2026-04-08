@@ -122,7 +122,7 @@ export default function Inventory() {
       </section>
 
       {/* Filter + Grid */}
-      <section>
+      <section className="no-bottom">
         <div className="container">
 
           {/* Filter Bar */}

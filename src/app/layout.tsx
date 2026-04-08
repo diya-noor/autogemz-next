@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/css/plugins.css" />
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="dark-scheme">
         <div id="wrapper">
           <a href="#" id="back-to-top"></a>
-          <div id="de-loader"></div>
+          <div id="de-loader" style={{ display: 'none' }}></div>
           <Header />
           {children}
           <Footer />

@@ -9,42 +9,24 @@ body {
   margin: 0;
   display: block;
   min-width: 320px;
+  padding-bottom: 0 !important;
 }
 
-html,
-body {
+html, body {
   background: var(--bg-dark-1) !important;
 }
 
-#content section:last-of-type {
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
+/* hide preloader immediately — prevents blocking scroll on first load */
+#de-loader { display: none !important; }
 
-#content section:last-of-type .container,
-#content section:last-of-type .row:last-child {
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
+/* match body bg to footer bg so short-page gap is invisible */
+html, body {
+  background: var(--bg-dark-2) !important;
 }
-
 footer {
-  margin: 0 !important;
-}
-
-#wrapper {
-  padding-bottom: 0 !important;
   margin-bottom: 0 !important;
-}
-
-body {
   padding-bottom: 0 !important;
 }
-
-/* ── footer gap removal ── */
-#content section:last-of-type {
+footer .subfooter {
   margin-bottom: 0 !important;
-}
-footer, #wrapper > footer {
-  margin: 0 !important;
-  padding-bottom: 0 !important;
 }

@@ -63,7 +63,7 @@ export default function Blog() {
         </div>
       </section>
 
-<section className="bg-color text-light pt-60 pb-50">
+<section className="bg-color text-light pt-60 no-bottom">
         <div className="container">
           <div className="row g-4">
             <div className="col-md-9">

@@ -74,7 +74,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden no-bottom">
         <div className="container">
           <div className="row g-4 gx-5">
             <div className="col-lg-6">

@@ -311,7 +311,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="no-bottom">
         <div className="container">
           <div className="row g-4">
             <div className="col-lg-5">

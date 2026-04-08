@@ -12,8 +12,12 @@ function waitForJQuery(cb: () => void, tries = 0) {
 
 export function usePluginInit() {
   useEffect(() => {
+    // Hide preloader immediately — no need to wait for jQuery
+    const loader = document.getElementById('de-loader');
+    if (loader) loader.style.display = 'none';
+
     waitForJQuery(() => {
-      $('#de-loader').delay(500).fadeOut('slow');
+      $('#de-loader').hide();
 
       $('#menu-btn').off('click.menuToggle').on('click.menuToggle', function (this: HTMLElement) {
         const isOpen = $('header').hasClass('menu-open');
@@ -40,6 +44,7 @@ export function usePluginInit() {
       }
 
       if (typeof jarallax !== 'undefined') {
+        jarallax(document.querySelectorAll('.jarallax'), 'destroy');
         jarallax(document.querySelectorAll('.jarallax'), { speed: 0.5 });
       }
 
@@ -109,6 +114,13 @@ export function usePluginInit() {
       });
     });
 
-    return () => {};
+    return () => {
+      if (typeof jarallax !== 'undefined') {
+        jarallax(document.querySelectorAll('.jarallax'), 'destroy');
+      }
+      // reset any leftover height jarallax added to the document on desktop
+      document.body.style.height = '';
+      document.documentElement.style.height = '';
+    };
   }, []);
 }

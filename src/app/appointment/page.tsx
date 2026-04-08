@@ -35,7 +35,7 @@ export default function Appointment() {
     <div className="no-bottom no-top mt-5" id="content">
       <div id="top"></div>
 
-      <section className="jarallax">
+      <section className="jarallax no-bottom">
         <img src="/images/background/1.webp" className="jarallax-img" alt="" />
         <div className="container relative z-2">
           <div className="spacer-single xs-hide"></div>

@@ -8,7 +8,7 @@ export default function TermsAndConditions() {
     <div className="no-bottom no-top" id="content">
       <div id="top"></div>
 
-      <section className="bg-dark-2 pt-100 pb-60">
+      <section className="bg-dark-2 pt-100 no-bottom">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 text-center">
