@@ -19,6 +19,23 @@ html, body {
 /* hide preloader immediately — prevents blocking scroll on first load */
 #de-loader { display: none !important; }
 
+/* testimonial cards on mobile */
+@media only screen and (max-width: 767px) {
+  .owl-2-dots .item .p-30 {
+    padding: 20px !important;
+  }
+  .owl-2-dots .item p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* prevent mobile menu flash on page load before JS adds header-mobile class */
+@media only screen and (max-width: 992px) {
+  #mainmenu { display: none; }
+  header.header-mobile #mainmenu { display: block; }
+}
+
 /* match body bg to footer bg so short-page gap is invisible */
 html, body {
   background: var(--bg-dark-2) !important;

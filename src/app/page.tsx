@@ -180,7 +180,7 @@ export default function Home() {
       <section>
         <div className="container">
           <div className="row g-4 align-items-center">
-            <div className="col-lg-4">
+            <div className="col-lg-4 text-center text-lg-start">
               <div className="subtitle">Testimonials</div>
               <h2>What They Says</h2>
             </div>
